@@ -1,24 +1,26 @@
 # Wildfly Cookbook
-Cookbook to deploy Wildfly Java Application Server
+Cookbook para deploy de App Java no Wildfly
 
-# Requirements
+# Requirementos
 Chef Client 11+
 
 Java Opscode Community Cookbook
 
-# Platform
+# Plataforma
 - CentOS, Red Hat, Fedora
 - EC2 Amazon Linux AMI
+- Debian
 
 Tested on:
-- CentOS 6.5
+- Ubuntu (local)
+- CentOS 6.5 (AWS)
 
-# Usage
-You can add users in the proper format to `attributes\users.rb`
+# Usando
+Você pode adicionar usuarios em `attributes\users.rb`
 
-You can customize the Java version, and the Connector/J if you'd like.
+Você pode customizar a versão do Java, e o Connector/J.
 
-# Attributes
+# Atributos - Attributes
 * `node['wildfly']['base']` - Base directory to run Wildfly from
 
 * `node['wildfly']['version']` - Specify the version of Wildfly
@@ -37,11 +39,13 @@ You can customize the Java version, and the Connector/J if you'd like.
 * `node['wildfly']['smtp']['port']` - SMTP Destination port
 
 
-# Recipes
-* `::default` - Installs Java & Wildfly.  Also installs Connector/J if you've got it enabled.
-* `::install` - Installs Wildfly.
-* `::mysql_connector` - Installs Connector/J into appropriate Wildfly directory.
+# Receitas - Recipes
+* `::default` - Instala Java & Wildfly.  Also installs Connector/J if you've got it enabled.
+* `::install` - Instala Wildfly.
+* `::mysql_connector` - Instala Connector/J no diretorio do Wildfly.
 
-# Author
+#Fork para
+Equipe de Desenvolvimento do CAP.
 
+# Autor Original:
 Author:: Brian Dwyer - Intelligent Digital Services
